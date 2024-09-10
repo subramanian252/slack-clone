@@ -61,7 +61,7 @@ function Page(props: Props) {
     open,
     setOpen,
     member,
-
+    workspaceId,
     memberLoading,
     isAdmin,
   ]);

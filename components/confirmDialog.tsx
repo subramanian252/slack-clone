@@ -64,4 +64,5 @@ function ConfirmDialog(
   return [DialogConfirm, confirm];
 }
 
+//msg
 export default ConfirmDialog;

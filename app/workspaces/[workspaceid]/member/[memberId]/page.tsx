@@ -20,7 +20,7 @@ function Page(props: Props) {
 
   useEffect(() => {
     mutate({ workspaceId, memberId });
-  }, [memberId, workspaceId]);
+  }, [memberId, workspaceId, mutate]);
 
   if (isPending) {
     return (
