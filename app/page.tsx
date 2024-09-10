@@ -3,6 +3,7 @@
 import UserButton from "@/features/auth/components/user-button";
 import useGetWorkspaces from "@/features/workspaces/api/use-get-workspaces";
 import { useCreateWorkSpaceModel } from "@/features/workspaces/store/use-create-workspace-modal";
+import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo } from "react";
 
@@ -24,11 +25,11 @@ export default function Home() {
     } else if (!open) {
       setOpen(true);
     }
-  }, [workSpaceId, isLoading]);
+  }, [workSpaceId, isLoading, router, setOpen, open]);
 
   return (
-    <div>
-      <UserButton />
+    <div className="h-full flex-1 flex flex-col gap-y-2 items-center justify-center">
+      <Loader2 className="size-5 animate-spin text-[#5e2c5f]" />
     </div>
   );
 }

@@ -37,6 +37,7 @@ function Reactions(props: Props) {
       {data.map((reaction) => {
         return (
           <Hint
+            key={reaction._id}
             label={`${reaction.count} ${reaction.count === 1 ? "person" : "people"} has reacted with ${reaction.value}`}
           >
             <button

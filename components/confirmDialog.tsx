@@ -13,7 +13,7 @@ interface Props {
   description: string;
 }
 
-function confirmDialog(
+function ConfirmDialog(
   props: Props
 ): [() => JSX.Element, () => Promise<unknown>] {
   const { title, description } = props;
@@ -64,4 +64,4 @@ function confirmDialog(
   return [DialogConfirm, confirm];
 }
 
-export default confirmDialog;
+export default ConfirmDialog;
